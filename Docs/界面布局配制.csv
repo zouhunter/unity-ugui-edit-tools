@@ -1,0 +1,10 @@
+层级,坐标,尺寸,控件类型,资源字典,参数
+root,0·0,1920·60,Image,[sprite](common/b01.png),
+root/close,1900·0,20·20,Button,"[normal](root/b01.png)
+[pressed](root/b02.png)",
+root/check,0·30,30·30,Toggle,"[background](root/b01.png)
+[mask](root/b02.png)",
+root/content/body,0·60,1920·1860,Image,[sprite](root/b03.png),[type](slised)
+root/content/body/slider,0·90,120·30,Slider,"[background](root/b03.png)
+[fill](root/b03.png)","[range](0·100)
+[direction](bottom)"
