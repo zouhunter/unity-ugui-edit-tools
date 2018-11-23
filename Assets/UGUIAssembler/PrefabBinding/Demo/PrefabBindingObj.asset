@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8fc8ec2940074046ad17f17ed5b7583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bindingItems:
+  - name: "\u4EBA"
+    index: 0
+    scriptName: Person
+    assemble: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    nodes:
+    - valueName: intValue
+      type: 0
+      singleValue: 100
+      vector3Value: {x: 0, y: 0, z: 0}
+      index: 0
+    - valueName: stringValue
+      type: 0
+      singleValue: hellow
+      vector3Value: {x: 0, y: 0, z: 0}
+      index: 0
+    - valueName: vectorValue
+      type: 2
+      singleValue: 
+      vector3Value: {x: 0, y: 0, z: 0}
+      index: 0
+    - valueName: transfomrValue
+      type: 1
+      singleValue: 
+      vector3Value: {x: 0, y: 0, z: 0}
+      index: 1
+    - valueName: GameObjectValue
+      type: 1
+      singleValue: 
+      vector3Value: {x: 0, y: 0, z: 0}
+      index: 2
+    - valueName: scriptValue1
+      type: 1
+      singleValue: 
+      vector3Value: {x: 0, y: 0, z: 0}
+      index: 3
+    - valueName: scriptValue2
+      type: 1
+      singleValue: 
+      vector3Value: {x: 0, y: 0, z: 0}
+      index: 4
+  - name: "\u5934"
+    index: 1
+    scriptName: UnityEngine.Transform
+    assemble: UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    nodes: []
+  - name: "\u8EAB\u4F53"
+    index: 2
+    scriptName: UnityEngine.GameObject
+    assemble: UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    nodes: []
+  - name: "\u5DE6\u773C"
+    index: 3
+    scriptName: Eye
+    assemble: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    nodes:
+    - valueName: intValue
+      type: 0
+      singleValue: 20
+      vector3Value: {x: 0, y: 0, z: 0}
+      index: 0
+    - valueName: stringValue
+      type: 0
+      singleValue: look
+      vector3Value: {x: 0, y: 0, z: 0}
+      index: 0
+  - name: "\u53F3\u773C"
+    index: 4
+    scriptName: Eye
+    assemble: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    nodes:
+    - valueName: intValue
+      type: 0
+      singleValue: 20
+      vector3Value: {x: 0, y: 0, z: 0}
+      index: 0
+    - valueName: stringValue
+      type: 0
+      singleValue: look
+      vector3Value: {x: 0, y: 0, z: 0}
+      index: 0
