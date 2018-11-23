@@ -1,0 +1,7 @@
+索引,描述,代码类型,代码集合,参数
+0,根节点,Person,"Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","[id](single·10)
+[name](single·小丙)
+[coodinate](vector3·1·2·3)
+[eye](reference·3)
+"
+1,左眼,Eye,"Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
