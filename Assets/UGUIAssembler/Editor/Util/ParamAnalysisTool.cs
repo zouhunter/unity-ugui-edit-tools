@@ -49,5 +49,6 @@ namespace UGUIAssembler
             int.TryParse(text, out intValue);
             return intValue;
         }
+
     }
 }
