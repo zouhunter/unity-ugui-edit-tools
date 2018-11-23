@@ -1,7 +1,7 @@
-索引,描述,代码类型,代码集合,参数
-0,根节点,Person,"Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","[id](single·10)
-[name](single·小丙)
-[coodinate](vector3·1·2·3)
-[eye](reference·3)
+名称(自定义),索引（对应）,路径（用于自动配对）,代码类型（脚本）,参数
+根节点,0,Root,[Person](Assembly-CSharp),"[id](single(10))
+[name](single(小丙))
+[coodinate](muit(1·2·3))
+[eye](refer(3))
 "
-1,左眼,Eye,"Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+左眼,1,Root/Eye,[Eye](Assembly-CSharp),
