@@ -15,29 +15,6 @@ namespace UGUIAssembler
             public string name;
             public NodeType type;
             public string text;
-
-            public Vector3 vector3Value
-            {
-                get
-                {
-                   return ParamAnalysisTool.ToVector3(text);
-                }
-                set
-                {
-                    text = ParamAnalysisTool.Vector3ToString(value);
-                }
-            }
-            public int indexValue
-            {
-                get
-                {
-                    return ParamAnalysisTool.ToInit(text);
-                }
-                set
-                {
-                    text = ParamAnalysisTool.IntToString(value);
-                }
-            }
         }
 
         [System.Serializable]

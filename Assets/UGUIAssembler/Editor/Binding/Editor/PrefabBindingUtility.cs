@@ -20,7 +20,11 @@ namespace UGUIAssembler
             ProjectWindowUtil.CreateAsset(obj, "PrefabBindingObj.asset");
             return obj;
         }
-
+        /// <summary>
+        /// 解析关联信息
+        /// </summary>
+        /// <param name="scripts"></param>
+        /// <param name="objHolds"></param>
         public static void ExargeRentItems(List<PrefabBindingObj.ScriptItem> scripts, List<PrefabBindingWindow.ObjHolder> objHolds)
         {
             var currCount = objHolds.Count;
@@ -45,34 +49,46 @@ namespace UGUIAssembler
                             PrefabBindingObj.ValueNode node = new PrefabBindingObj.ValueNode();
                             scriptItem.nodes.Add(node);
                             node.name = item.Name;
-                            if (item.FieldType == typeof(float) || item.FieldType == typeof(double)
-                                || item.FieldType == typeof(int) || item.FieldType == typeof(long)
-                                || item.FieldType == typeof(string) || item.FieldType == typeof(String))
+                            if (IsSingleType(item.FieldType))
                             {
                                 node.type = PrefabBindingObj.NodeType.single;
                                 node.text = item.GetValue(mitem).ToString();
                             }
-
-                            else if (item.FieldType == typeof(Vector3))
-                            {
-                                node.type = PrefabBindingObj.NodeType.quote;
-                                node.vector3Value = (Vector3)item.GetValue(mitem);
-                            }
                             else if (item.FieldType.IsSubclassOf(typeof(UnityEngine.Object)))
                             {
-                                node.type = PrefabBindingObj.NodeType.multiple;
+                                node.type = PrefabBindingObj.NodeType.quote;
                                 var obj = ((UnityEngine.Object)item.GetValue(mitem));
                                 var targetItem = SurchItemOrInit(objHolds, obj);
-                                node.indexValue = targetItem.index;
-                                var targetScript = SurchItemOrInit(scripts, node.indexValue, Assembly.GetAssembly(obj.GetType()).ToString(), obj.GetType().Name);
+                                node.text = targetItem.index.ToString();
+                                var targetScript = SurchItemOrInit(scripts, targetItem.index, Assembly.GetAssembly(obj.GetType()).ToString(), obj.GetType().Name);
                                 targetScript.scriptName = obj.GetType().ToString();
                                 targetScript.name = targetItem.name;
+                            }
+                            else//可序列化对象
+                            {
+                                node.type = PrefabBindingObj.NodeType.multiple;
+                                node.text = ParamAnalysisTool.StructToString(item.GetValue(mitem), item.FieldType);
+                                //node.vector3Value = (Vector3)item.GetValue(mitem);
                             }
 
                         }
                     }
                 }
             }
+        }
+        /// <summary>
+        /// 判断是否为单值类型
+        /// </summary>
+        /// <param name="itype"></param>
+        /// <returns></returns>
+        private static bool IsSingleType(Type itype)
+        {
+            return itype == typeof(float) ||
+                itype == typeof(double) ||
+                itype == typeof(int) ||
+                itype == typeof(long) ||
+                itype == typeof(string) ||
+                itype == typeof(String);
         }
 
         private static PrefabBindingObj.ScriptItem SurchItemOrInit(List<PrefabBindingObj.ScriptItem> scripts, int index, string assemble, string scriptName)
@@ -144,22 +160,22 @@ namespace UGUIAssembler
                                 type.InvokeMember(valueItem.name, BindingFlags.SetField | BindingFlags.Instance | BindingFlags.Public,
                                     null, script, new object[] { value }, null, null, null);
                             }
-                            else if (valueItem.type == PrefabBindingObj.NodeType.quote)
+                            else if (valueItem.type == PrefabBindingObj.NodeType.multiple)
                             {
                                 type.InvokeMember(valueItem.name, BindingFlags.SetField | BindingFlags.Instance | BindingFlags.Public,
-                                    null, script, new object[] { valueItem.vector3Value }, null, null, null);
+                                    null, script, new object[] { ParamAnalysisTool.StructFromString(valueItem.text,typeof(Vector3)) }, null, null, null);
                             }
-                            else if (valueItem.type == PrefabBindingObj.NodeType.multiple)
+                            else if (valueItem.type == PrefabBindingObj.NodeType.quote)
                             {
                                 if (type.GetField(valueItem.name).FieldType == typeof(GameObject))
                                 {
-                                    var obj = objHolds[valueItem.indexValue].obj;
+                                    var obj = objHolds[ParamAnalysisTool.ToInit( valueItem.text)].obj;
                                     type.InvokeMember(valueItem.name, BindingFlags.SetField | BindingFlags.Instance | BindingFlags.Public,
                                   null, script, new object[] { obj }, null, null, null);
                                 }
                                 else if (type.GetField(valueItem.name).FieldType.IsSubclassOf(typeof(Component)))
                                 {
-                                    var obj = objHolds[valueItem.indexValue].obj;
+                                    var obj = objHolds[ParamAnalysisTool.ToInit(valueItem.text)].obj;
                                     var com = AddComponentSingle(obj, type.GetField(valueItem.name).FieldType);
                                     type.InvokeMember(valueItem.name, BindingFlags.SetField | BindingFlags.Instance | BindingFlags.Public, null, script, new object[] { com }, null, null, null);
                                 }

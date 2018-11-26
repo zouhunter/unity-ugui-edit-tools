@@ -14,7 +14,6 @@ namespace UGUIAssembler
             public GameObject obj;
             public static int id;
             public ObjHolder() { index = id++; }
-
             public int CompareTo(ObjHolder obj)
             {
                 if (obj.index > index)
@@ -32,13 +31,13 @@ namespace UGUIAssembler
             }
         }
 
-        PrefabBindingObj obj;
-        string[] switchOption = new string[] { "信息记录", "信息加载" };
-        int selected = 0;
-        Vector2 viewScrop;
+        private PrefabBindingObj obj;
+        private string[] switchOption = new string[] { "信息记录", "信息加载" };
+        private int selected = 0;
+        private Vector2 viewScrop;
         public List<ObjHolder> objectList = new List<ObjHolder>();
-        SerializedObject serializedObj;
-        SerializedProperty scriptProp;
+        private SerializedObject serializedObj;
+        private SerializedProperty scriptProp;
         private ReorderableList reorderList;
         private void OnEnable()
         {

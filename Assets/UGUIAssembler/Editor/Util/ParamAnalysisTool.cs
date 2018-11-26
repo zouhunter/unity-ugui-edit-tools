@@ -7,7 +7,12 @@ namespace UGUIAssembler
     public class ParamAnalysisTool
     {
         public const char seperator = '·';
-
+        public static int ToInit(string text)
+        {
+            var intValue = 0;
+            int.TryParse(text, out intValue);
+            return intValue;
+        }
         public static Vector3 ToVector3(string param)
         {
             if (string.IsNullOrEmpty(param)) return Vector3.zero;
@@ -27,7 +32,6 @@ namespace UGUIAssembler
             }
             return value;
         }
-
         public static string Vector3ToString(Vector3 value)
         {
             var array = new string[3];
@@ -38,17 +42,16 @@ namespace UGUIAssembler
             return string.Join(seperator.ToString(), array);
         }
 
-        public static string IntToString(int value)
+        public static string StructToString(object value,Type type)
         {
-            return value.ToString();
+            YAMLite.Node node = new YAMLite.Node();
+            node["a"] = "aValue";
+            return node;
         }
 
-        public static int ToInit(string text)
+        internal static object StructFromString(string text, Type type)
         {
-            var intValue = 0;
-            int.TryParse(text, out intValue);
-            return intValue;
+            throw new NotImplementedException();
         }
-
     }
 }

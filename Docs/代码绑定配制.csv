@@ -1,7 +1,7 @@
 名称(自定义),索引（对应）,路径（用于自动配对）,代码类型（脚本）,参数
-根节点,0,Root,[Person](Assembly-CSharp),"[id](single(10))
-[name](single(小丙))
-[coodinate](muit(1·2·3))
-[eye](refer(3))
+根节点,0,Root,[Person](Assembly-CSharp),"[id](10)
+[name](小丙)
+[coodinate]({x:1,y:2,z:3})
+[eye](3)
 "
 左眼,1,Root/Eye,[Eye](Assembly-CSharp),
