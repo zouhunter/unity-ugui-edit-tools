@@ -1,0 +1,3 @@
+名称,层级,控件类型,坐标尺寸,参数字典,子控件参数字典
+深度,Root/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y/z/image,Image,"[10,10,1900,1060]",sprite:底图1.png,
+深度,Root/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y/z/image,Image,"[10,20,1900,1060]",sprite:底图1.png,

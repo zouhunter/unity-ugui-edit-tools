@@ -1,0 +1,14 @@
+名称,层级,控件类型,坐标尺寸,参数字典,子控件参数字典
+,,,,,
+文字1,Texts/text1,Text,"[10,10,120,60]","text:文字1
+name:rename supported
+color:FF0000FF
+size:22
+font:font0.ttf
+
+",
+,,,,,
+文字2,Texts/text2,Text,"[10,140,120,60]","text:文字2
+color:00FF00FF
+size:22
+alignment:MiddleCenter",

@@ -1,0 +1,48 @@
+"名称","层级","控件类型","坐标尺寸","参数字典","子控件参数字典列表"
+"rightPSD","[根目标]","Image","[0.00,0.00,1920.00,1080.00]","name:bottom
+sprite:bottom.png
+rect:[64.00,913.00,1733.00,140.00]
+","Text:{
+name:这是一种可能 性
+rect:[673.50,301.60,570.00,76.80]
+color:0012FFFF
+text:这是一种可能 性
+fontSize:66
+}
+Text:{
+name:你好
+rect:[266.40,159.30,115.20,56.40]
+color:0030FEFF
+text:你好
+fontSize:50
+}
+"
+"top","top","Image","[0.00,0.00,1920.00,408.00]","name:headbar
+sprite:headbar.png
+rect:[0.00,0.00,1920.00,86.00]
+","Text:{
+name:标题信息不能少
+rect:[709.60,4.80,376.80,50.40]
+color:FE00E9FF
+text:标题信息不能少
+fontSize:45
+}
+Text:{
+name:磊大大五
+rect:[257.70,358.50,219.60,54.00]
+color:FE00E9FF
+text:磊大大五
+fontSize:45
+}
+"
+"close","top/close","Button","[1792.00,10.00,117.00,60.00]","spriteState:(image02.png,,)
+","image:{
+name:image01
+sprite:image01.png
+rect:[0.00,0.00,117.00,60.00]
+}
+"
+"center","center","Image","[539.00,232.00,820.00,587.00]","name:矩形 1
+sprite:矩形 1.png
+rect:[0.00,0.00,820.00,587.00]
+",""

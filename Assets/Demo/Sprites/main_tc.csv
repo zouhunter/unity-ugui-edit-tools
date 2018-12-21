@@ -1,0 +1,7 @@
+图片路径,导入类型,导入参数,子切图
+二级菜单背景图.png,Sprite,"spriteBorder:(5,5,5,5)",
+讲解框.png,Sprite,spriteImportMode:Multiple,"{
+name:main
+rect:[11,6,128,167]
+border:(10,10,10,10)
+}"

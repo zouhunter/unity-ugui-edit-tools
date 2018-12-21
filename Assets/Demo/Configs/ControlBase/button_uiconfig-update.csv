@@ -1,0 +1,4 @@
+名称,层级,控件类型,坐标尺寸,参数字典,子控件参数字典列表
+颜色按扭,Buttons/simple/colorButton,Button,"[400.00,600.00,120.00,200]",,
+文字按扭,Buttons/complex/textButton,Button,"[900.00,600.00,120.00,61.00]",,
+图片按扭,Buttons/complex/imageButton,Button,"[900.00,700.00,120.00,61.00]",,

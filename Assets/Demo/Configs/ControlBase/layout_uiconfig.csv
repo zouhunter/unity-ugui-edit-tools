@@ -1,0 +1,26 @@
+名称,层级,控件类型,坐标尺寸,参数字典,子控件参数字典
+窗口,Content/Empty,RectTransform,"[200,200,1520,680]","scale:(1,1,1)","Image:{
+name:image01
+rect:[0,0,40,10]
+sprite:底图2.png
+}
+
+Text:{
+name:text02
+rect:[0,10,40,10]
+}
+
+Text:{
+name:text01
+rect:[0,20,40,10]
+color:FF0000FF
+text:你好，friend
+}
+
+RawImage:{
+name:texture01
+rect:[0,30,40,10]
+texture:底图2.png
+}
+"
+,,,            ,,

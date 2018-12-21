@@ -1,0 +1,23 @@
+"相对路径","程序集","类型","资源字典"
+"","Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","Person","intValue:100
+stringValue:hellow
+vectorValue:(10.00,10.00,10.00)
+transfomrValue:Capsule
+GameObjectValue:Body
+scriptValue1:Capsule/Sphere1
+scriptValue2:Capsule/Sphere2
+botyBtn:Body
+"
+"Capsule/Sphere1","Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","Eye","intValue:20
+stringValue:look
+parent:Capsule
+spriteValue:7b15ddfbe6e748545834cc4a0a44ead7
+matrialValue:0000000000000000f000000000000000
+otherEye:Capsule/Sphere2
+"
+"Capsule/Sphere2","Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","Eye","intValue:20
+stringValue:look
+spriteValue:d2a88e93b2d0c6449ac5255c7a4e17bf
+matrialValue:0000000000000000e000000000000000
+otherEye:Capsule/Sphere1
+"
