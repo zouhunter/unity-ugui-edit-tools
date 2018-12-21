@@ -13,7 +13,7 @@ Unity 2018.2f 以上 Windows
 3. Menu "Assets/Create/Custom-UI" "GameObject/UI/Custom"
 
 ## 截图
-![UI配制编辑窗口](Pics/configPreviewWindow)
+![UI配制编辑窗口](Pics/configPreviewWindow.png)
 
 ## License
 Copyright (c) 2017 zouhunter
